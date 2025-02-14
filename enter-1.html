@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d9534f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            border-color: #d9534f;
+            outline: none;
+        }
+
+        button {
+            background-color: #d9534f;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff6f61;
+        }
+
+        button:active {
+            background-color: #ff6f61;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>ENTER YOUR NAME</h1>
+        <input id="nameInput" placeholder="Name" type="text">
+        <button id="loginButton">LOGIN</button>
+    </div>
+
+    <script>
+        const loginButton = document.getElementById('loginButton');
+        const nameInput = document.getElementById('nameInput');
+
+        loginButton.addEventListener('click', function () {
+            const name = nameInput.value.trim();
+
+            if (name.toLowerCase() === 'tasnim') {
+                window.location.href = 'love letter 2.html';
+            } else {
+                alert('Nom incorrect. Veuillez réessayer.');
+            }
+        });
+    </script>
+</body>
+</html>
